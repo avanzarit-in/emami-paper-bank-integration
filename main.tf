@@ -59,10 +59,10 @@ resource "aws_lambda_function" "emami-paper-bank-api-lambda" {
 
   source_code_hash = "${filebase64sha256("emami-paper-bank-api.zip")}"
 
-  # "main" is the filename within the zip file (main.js) and "handler"
+  # "validation" is the filename within the zip file (validation.js) and "handler"
   # is the name of the property under which the handler function was
   # exported in that file.
-  handler = "main.handler"
+  handler = "validation.handler"
   runtime = "nodejs10.x"
 
   role = "${aws_iam_role.lambda_exec.arn}"
