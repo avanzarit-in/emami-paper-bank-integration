@@ -1,37 +1,10 @@
-# Eclipse
-.classpath
-.project
-.settings/
-
-
 # Intellij
 .idea/
 *.iml
 *.iws
 
-# Mac
-.DS_Store
-
-# Maven
-log/
-target/
-
-**/*.pdf
-
-# Local .terraform directories
-.terraform/*
-
-.terraform/plugins/**
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
+terraform/
 terraform.tfvars.json
-
-main.tf
-
 *.zip
-
 node_modules/
-
 output.txt
