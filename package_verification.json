@@ -1,8 +1,8 @@
 {
-  "name": "emami-paper-bank-api-notification",
+  "name": "emami-paper-bank-api-validation",
   "version": "1.0.0",
   "description": "",
-  "main": "notification.js",
+  "main": "validation.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "npm-pack-zip"
@@ -13,6 +13,6 @@
     "npm-pack-zip": "^1.2.7"
   },
   "files": [
-    "notification.js"
+    "validation.js"
   ]
 }
