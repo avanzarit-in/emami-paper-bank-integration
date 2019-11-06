@@ -78,7 +78,7 @@ resource "aws_api_gateway_resource" "emami-paper-bank-rest-api-proxy-resource" {
 resource "aws_api_gateway_method" "emami-paper-bank-rest-api-proxy-method" {
   rest_api_id   = "${aws_api_gateway_rest_api.emami-paper-bank-rest-api.id}"
   resource_id   = "${aws_api_gateway_resource.emami-paper-bank-rest-api-proxy-resource.id}"
-  http_method   = "ANY"
+  http_method = "POST"
   authorization = "NONE"
 }
 
@@ -96,7 +96,7 @@ resource "aws_api_gateway_integration" "lambda" {
 resource "aws_api_gateway_method" "emami-paper-bank-rest-api-proxy-method-root" {
   rest_api_id   = "${aws_api_gateway_rest_api.emami-paper-bank-rest-api.id}"
   resource_id   = "${aws_api_gateway_rest_api.emami-paper-bank-rest-api.root_resource_id}"
-  http_method   = "ANY"
+  http_method = "POST"
   authorization = "NONE"
 }
 
@@ -119,6 +119,7 @@ resource "aws_api_gateway_deployment" "emami-paper-bank-rest-api-deployment" {
 
   rest_api_id = "${aws_api_gateway_rest_api.emami-paper-bank-rest-api.id}"
   stage_name  = "test"
+  description = "Deployed at ${timestamp()}"
 }
 
 resource "aws_lambda_permission" "apigw" {
@@ -131,4 +132,3 @@ resource "aws_lambda_permission" "apigw" {
   # within the API Gateway REST API.
   source_arn = "${aws_api_gateway_rest_api.emami-paper-bank-rest-api.execution_arn}/*/*"
 }
-

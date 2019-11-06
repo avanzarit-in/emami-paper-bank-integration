@@ -1,18 +1,22 @@
 {
-  "name": "emami-paper-bank-api-notification",
+  "name": "emami-paper-bank-integration",
   "version": "1.0.0",
   "description": "",
-  "main": "notification.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "npm-pack-zip"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avanzarit-in/emami-paper-bank-integration.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "npm-pack-zip": "^1.2.7"
+  "bugs": {
+    "url": "https://github.com/avanzarit-in/emami-paper-bank-integration/issues"
   },
-  "files": [
-    "notification.js"
-  ]
+  "homepage": "https://github.com/avanzarit-in/emami-paper-bank-integration#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4"
+  }
 }

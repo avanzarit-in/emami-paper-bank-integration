@@ -1,7 +1,8 @@
 'use strict'
 
 exports.handler = async function(event, context, callback) {
-  console.log("Hi thre")
+  console.log(event);
+  console.log(JSON.parse(event.body));
   var response = {
     statusCode: 200,
     headers: {
