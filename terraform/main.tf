@@ -32,7 +32,7 @@ module "core" {
 module "notification-api"{
   source="./api"
   emami-paper-bank-api-lambda-source-bucket-id = module.core.emami-paper-bank-api-lambda-source-bucket-id
-  lambda-source="../emami-paper-bank-api-notification.zip"
+  lambda-source = "../src/notification-api/emami-paper-bank-api-notification.zip"
   lambda-s3-key = "v1.0.0/emami-paper-bank-api-notification.zip"
   handler = "notification.handler"
   runtime = "nodejs10.x"
@@ -42,7 +42,7 @@ module "notification-api"{
 module "validation-api"{
   source="./api"
   emami-paper-bank-api-lambda-source-bucket-id = module.core.emami-paper-bank-api-lambda-source-bucket-id
-  lambda-source="../emami-paper-bank-api-validation.zip"
+  lambda-source = "../src/validation-api/emami-paper-bank-api-validation.zip"
   lambda-s3-key = "v1.0.0/emami-paper-bank-api-validation.zip"
   handler = "validation.handler"
   runtime = "nodejs10.x"
