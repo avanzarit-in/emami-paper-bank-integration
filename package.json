@@ -19,6 +19,8 @@
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-hub": "^1.0.0",
+    "grunt-run": "^0.8.1",
+    "grunt-shell": "^3.0.1",
     "load-grunt-tasks": "^5.1.0",
     "time-grunt": "^2.0.0"
   }
