@@ -2,30 +2,30 @@
 
 exports.handler = async function(event, context, callback) {
   console.log(JSON.parse(event.body));
-  var transferUniqueNumber = JSON.parse(event.body).validate.transfer_unique_no;
+  var rmtrAccountNo = JSON.parse(event.body).validate.rmtr_account_no;
   var response = {};
-  if (transferUniqueNumber === "N01234567890") {
+  if (rmtrAccountNo === "123456780") {
     response = {
       statusCode: 400,
       headers: {
         "Content-Type": "text/html; charset=utf-8"
       }
     };
-  } else if (transferUniqueNumber === "N01234567891") {
+  } else if (rmtrAccountNo === "123456781") {
     response = {
       statusCode: 401,
       headers: {
         "Content-Type": "text/html; charset=utf-8"
       }
     };
-  } else if (transferUniqueNumber === "N01234567892") {
+  } else if (rmtrAccountNo === "123456782") {
     response = {
       statusCode: 500,
       headers: {
         "Content-Type": "text/html; charset=utf-8"
       }
     };
-  } else if (transferUniqueNumber === "N01234567893") {
+  } else if (rmtrAccountNo === "123456783") {
     response = {
       statusCode: 200,
       headers: {
@@ -37,7 +37,7 @@ exports.handler = async function(event, context, callback) {
         }
       })
     };
-  }else if (transferUniqueNumber === "N01234567894") {
+  }else if (rmtrAccountNo === "123456784") {
     response = {
       statusCode: 200,
       headers: {
@@ -49,7 +49,7 @@ exports.handler = async function(event, context, callback) {
         }
       })
     };
-  }else if (transferUniqueNumber === "N01234567895") {
+  }else if (rmtrAccountNo === "123456785") {
     response = {
       statusCode: 200,
       headers: {
@@ -60,6 +60,13 @@ exports.handler = async function(event, context, callback) {
           decision: "reject"
         }
       })
+    };
+  }else{
+    response = {
+      statusCode: 400,
+      headers: {
+        "Content-Type": "text/html; charset=utf-8"
+      }
     };
   }
 
