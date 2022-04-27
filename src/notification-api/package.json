@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.2",
     "grunt-run": "^0.8.1",
     "grunt-shell": "^3.0.1",
     "npm-pack-zip": "^1.2.7"
