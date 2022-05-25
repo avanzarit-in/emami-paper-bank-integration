@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/avanzarit-in/emami-paper-bank-integration#readme",
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.3",
     "grunt-hub": "^1.0.0",
     "grunt-run": "^0.8.1",
     "grunt-shell": "^3.0.1",
